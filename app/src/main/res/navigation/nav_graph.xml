@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMakanan">
+
+    <fragment
+        android:id="@+id/fragmentMakanan"
+        android:name="com.example.aplikasirestaurant.FragmentMakanan"
+        android:label="fragment_makanan"
+        tools:layout="@layout/fragment_makanan" >
+        <action
+            android:id="@+id/action_fragmentMakanan_to_detailNasigoreng"
+            app:destination="@id/detailNasigoreng" />
+        <action
+            android:id="@+id/action_fragmentMakanan_to_detailBakso"
+            app:destination="@id/detailBakso" />
+        <action
+            android:id="@+id/action_fragmentMakanan_to_detailMieayam"
+            app:destination="@id/detailMieayam" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMinuman"
+        android:name="com.example.aplikasirestaurant.FragmentMinuman"
+        android:label="fragment_minuman"
+        tools:layout="@layout/fragment_minuman" />
+    <fragment
+        android:id="@+id/fragmentPerson"
+        android:name="com.example.aplikasirestaurant.FragmentPerson"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" />
+    <fragment
+        android:id="@+id/fragmentPesanan"
+        android:name="com.example.aplikasirestaurant.FragmentPesanan"
+        android:label="fragment_pesanan"
+        tools:layout="@layout/fragment_pesanan" />
+    <fragment
+        android:id="@+id/detailNasigoreng"
+        android:name="com.example.aplikasirestaurant.DetailNasigoreng"
+        android:label="fragment_detail_nasigoreng"
+        tools:layout="@layout/fragment_detail_nasigoreng" />
+    <fragment
+        android:id="@+id/detailBakso"
+        android:name="com.example.aplikasirestaurant.detailBakso"
+        android:label="fragment_detail_bakso"
+        tools:layout="@layout/fragment_detail_bakso" />
+    <fragment
+        android:id="@+id/detailMieayam"
+        android:name="com.example.aplikasirestaurant.detailMieayam"
+        android:label="fragment_detail_mieayam"
+        tools:layout="@layout/fragment_detail_mieayam" />
+    <fragment
+        android:id="@+id/detailAirputih"
+        android:name="com.example.aplikasirestaurant.detailAirputih"
+        android:label="fragment_detail_airputih"
+        tools:layout="@layout/fragment_detail_airputih" />
+</navigation>
