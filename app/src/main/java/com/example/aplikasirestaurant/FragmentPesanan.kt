@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,15 @@ class FragmentPesanan : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_pesanan, container, false)
+        val button = view.findViewById<Button>(R.id.btn_pesan)
+        button.setOnClickListener {
+            Toast.makeText(context, "Anda telah berhasil memesan", Toast.LENGTH_SHORT).show()
+
+        }
+        return view
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pesanan, container, false)
+//        return inflater.inflate(R.layout.fragment_pesanan, container, false)
     }
 
     companion object {

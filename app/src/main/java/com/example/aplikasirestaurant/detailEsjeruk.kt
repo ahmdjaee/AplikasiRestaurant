@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import com.example.aplikasirestaurant.databinding.FragmentMinumanBinding
-import com.example.aplikasirestaurant.databinding.FragmentPersonBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,14 +13,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentPerson.newInstance] factory method to
+ * Use the [detailEsjeruk.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentPerson : Fragment() {
+class detailEsjeruk : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var binding: FragmentPersonBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -37,20 +33,9 @@ class FragmentPerson : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPersonBinding.inflate(layoutInflater,container, false)
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_person, container, false)
-        val button = view.findViewById<Button>(R.id.btnLogout)
-        button.setOnClickListener {
-            Toast.makeText(context, "Anda telah berhasi log out", Toast.LENGTH_SHORT).show()
-
-        }
-
-//        return inflater.inflate(R.layout.fragment_person, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_detail_esjeruk, container, false)
     }
-
-
 
     companion object {
         /**
@@ -59,12 +44,12 @@ class FragmentPerson : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentPerson.
+         * @return A new instance of fragment detailEsjeruk.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentPerson().apply {
+            detailEsjeruk().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

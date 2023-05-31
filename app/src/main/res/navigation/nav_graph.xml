@@ -24,7 +24,17 @@
         android:id="@+id/fragmentMinuman"
         android:name="com.example.aplikasirestaurant.FragmentMinuman"
         android:label="fragment_minuman"
-        tools:layout="@layout/fragment_minuman" />
+        tools:layout="@layout/fragment_minuman" >
+        <action
+            android:id="@+id/action_fragmentMinuman_to_detailAirputih"
+            app:destination="@id/detailAirputih" />
+        <action
+            android:id="@+id/action_fragmentMinuman_to_detailEsteh"
+            app:destination="@id/detailEsteh" />
+        <action
+            android:id="@+id/action_fragmentMinuman_to_detailEsjeruk"
+            app:destination="@id/detailEsjeruk" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentPerson"
         android:name="com.example.aplikasirestaurant.FragmentPerson"
@@ -39,7 +49,11 @@
         android:id="@+id/detailNasigoreng"
         android:name="com.example.aplikasirestaurant.DetailNasigoreng"
         android:label="fragment_detail_nasigoreng"
-        tools:layout="@layout/fragment_detail_nasigoreng" />
+        tools:layout="@layout/fragment_detail_nasigoreng" >
+        <action
+            android:id="@+id/action_detailNasigoreng_to_fragmentPesanan"
+            app:destination="@id/fragmentPesanan" />
+    </fragment>
     <fragment
         android:id="@+id/detailBakso"
         android:name="com.example.aplikasirestaurant.detailBakso"
@@ -55,4 +69,18 @@
         android:name="com.example.aplikasirestaurant.detailAirputih"
         android:label="fragment_detail_airputih"
         tools:layout="@layout/fragment_detail_airputih" />
+    <fragment
+        android:id="@+id/detailEsteh"
+        android:name="com.example.aplikasirestaurant.detailEsteh"
+        android:label="fragment_detail_esteh"
+        tools:layout="@layout/fragment_detail_esteh" >
+        <action
+            android:id="@+id/action_detailEsteh_to_fragmentPesanan"
+            app:destination="@id/fragmentPesanan" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEsjeruk"
+        android:name="com.example.aplikasirestaurant.detailEsjeruk"
+        android:label="fragment_detail_esjeruk"
+        tools:layout="@layout/fragment_detail_esjeruk" />
 </navigation>
